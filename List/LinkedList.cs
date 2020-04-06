@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net.Sockets;
 
 namespace List
 {
-    public class LinkedList
+    public class LinkedList<T>: System.Collections.Generic.IEnumerable<T> where T : new()
     {
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
             string size = Console.ReadLine();
-            LinkedList list = new LinkedList(Convert.ToInt32(size));
+            LinkedList<int> list = new LinkedList<int>(Convert.ToInt32(size));
             list.Output();
             list.Remove(0);
             list.Output();
@@ -20,22 +22,22 @@ namespace List
             list.Output();
         }
         
-        private Node begin;
-        private Node end;
+        private Node<T> begin;
+        private Node<T> end;
         private int count;
         private bool IsEmpty => count == 0;
 
-        private LinkedList(int size)
+        public LinkedList(int size)
         {
             if (size <= 0) return;
-            int num = -1;
+            
             for (int i = 0; i < size; i++)
-                Add(++num);
+                Add(new T());
         }
 
-        public void Add(int data)
+        public void Add(T data)
         {
-            Node node = new Node(data);
+            Node<T> node = new Node<T>(data);
             if (begin == null)
                 begin = node;
             else
@@ -44,16 +46,16 @@ namespace List
             count++;
         }
 
-        public bool Remove(int data)
+        public bool Remove(T data)
         {
             if (IsEmpty) return false;
-            Node current = begin;
-            Node previous = null;
+            Node<T> current = begin;
+            Node<T> previous = null;
             bool isFound = false;
             
             for (int i = 0; i < count; i++)
             {
-                if (current.data == data)
+                if (current.data.Equals(data))
                 {
                     isFound = true;
                     break;
@@ -91,7 +93,7 @@ namespace List
         public void Output()
         {
             if(IsEmpty) Console.Write("Empty");
-            Node node = begin;
+            Node<T> node = begin;
             while(node != null)
             {
                 Console.Write("{0} ", node.data);
@@ -103,7 +105,7 @@ namespace List
         public void Reverse()
         {
             if (count < 2) return;
-            Node previousNode, currentNode = begin;
+            Node<T> previousNode, currentNode = begin;
             begin = end;
             end = currentNode;
             previousNode = currentNode; 
@@ -118,14 +120,23 @@ namespace List
                 previousNode.next = null;
                 while (currentNode != null)
                 {
-                    Node nextNode = currentNode.next;
+                    Node<T> nextNode = currentNode.next;
                     currentNode.next = previousNode;
                     previousNode = currentNode;
                     currentNode = nextNode;
                 }
             }
         }
-        
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
     
 }

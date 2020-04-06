@@ -1,4 +1,4 @@
-﻿namespace List
+﻿﻿namespace ClassLibrary1
 {
     class Node<T>
     {
