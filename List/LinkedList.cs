@@ -20,8 +20,6 @@ namespace List
             list.Output();
         }
         
-        //commit 2
-
         private Node begin;
         private Node end;
         private int count;
