@@ -6,14 +6,28 @@ namespace Lab1
     {
         static void Main(String[] args)
         {
-            CheckTree();
+            CheckList();
+            //CheckTree();
         }
 
         private static void CheckList()
         {
-            var size = Console.ReadLine();
-            var list = new LinkedList<int>(Convert.ToInt32(size));
+            //var size = Console.ReadLine();
+            var list = new LinkedList<int>(1);//Convert.ToInt32(size));
+            list.Add(4);
+            list.Add(3);
+            list.Add(5);
+            list.Add(2);
+            
             list.Output();
+            
+            list.Sort();
+            
+            list.Output();
+            list.Add(9);
+            list.Output();
+            
+            /*list.Output();
             list.Remove(0);
             list.Output();
             list.Remove(11);
@@ -21,7 +35,7 @@ namespace Lab1
             list.Add(10);
             list.Output();
             list.Reverse();
-            list.Output();
+            list.Output();*/
         }
 
         private static void CheckTree()
