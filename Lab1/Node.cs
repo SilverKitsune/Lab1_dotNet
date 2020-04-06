@@ -1,4 +1,4 @@
-﻿namespace List
+﻿namespace Lab1
 {
     class Node<T>
     {

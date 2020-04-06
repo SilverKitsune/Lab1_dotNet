@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace List
+namespace Lab1
 {
     public static class MainClass
     {
         static void Main(String[] args)
         {
-            string size = Console.ReadLine();
-            LinkedList<int> list = new LinkedList<int>(Convert.ToInt32(size));
+            var size = Console.ReadLine();
+            var list = new LinkedList<int>(Convert.ToInt32(size));
             list.Output();
             list.Remove(0);
             list.Output();
