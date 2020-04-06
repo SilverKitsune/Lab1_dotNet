@@ -17,6 +17,8 @@
             </e>
           </e>
         </e>
+        <e p="Tree.cs" t="Include" />
+        <e p="TreeNode.cs" t="Include" />
       </e>
       <e p="lab1.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

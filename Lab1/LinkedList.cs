@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Sockets;
 
 namespace Lab1
 {
     /**Односвязный список*/
-    public class LinkedList<T>: System.Collections.Generic.IEnumerable<T> where T : new()
+    public class LinkedList<T>: IEnumerable<T> where T : new()
     {
         private Node<T> begin;
         private Node<T> end;
