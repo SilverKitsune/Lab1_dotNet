@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9d55902c-b36c-456d-9441-af1900a7647f" name="serv" url="https://avzhukauskayte@dev.azure.com/avzhukauskayte/dotnet/_git/dotnet">
+        <fileTransfer port="0" mountedRoot="C:\Program Files\JetBrains\JetBrains Rider 2019.3.1\jbr\bin" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
