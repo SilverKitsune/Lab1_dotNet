@@ -2,6 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>Lab1</AssemblyName>
+        <RootNamespace>Lab1</RootNamespace>
         <OutputType>Exe</OutputType>
     </PropertyGroup>
     

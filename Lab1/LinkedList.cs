@@ -130,12 +130,18 @@ namespace List
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            Node<T> current = begin;
+ 
+            while (current != null)
+            {
+                yield return current.data;
+                current = current.next;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return GetEnumerator();
+            return ((IEnumerable<T>)this).GetEnumerator();
         }
     }
     

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List", "List\List.csproj", "{C3F8175C-D65A-47A3-AA53-3AD370339340}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1", "Lab1\Lab1.csproj", "{C3F8175C-D65A-47A3-AA53-3AD370339340}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
