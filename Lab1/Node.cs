@@ -1,5 +1,6 @@
 ﻿namespace Lab1
 {
+    /**Элемент*/
     class Node<T>
     {
         public T data { get; internal set; }
