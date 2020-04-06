@@ -10,6 +10,7 @@ namespace Lab1
         private Node<T> _begin;
         private Node<T> _end;
         private int _count;
+        
         private bool IsEmpty => _count == 0;
 
         public LinkedList(int size)
