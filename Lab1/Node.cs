@@ -2,7 +2,6 @@
 
 namespace Lab1
 {
-    /**Элемент*/
     class Node<T> : IComparable<Node<T>> where T : IComparable, new()
     {
         public T data { get; internal set; }

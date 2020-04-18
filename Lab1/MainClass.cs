@@ -12,8 +12,7 @@ namespace Lab1
 
         private static void CheckList()
         {
-            //var size = Console.ReadLine();
-            var list = new LinkedList<int>(1);//Convert.ToInt32(size));
+            var list = new LinkedList<int>(1);
             list.Add(4);
             list.Add(3);
             list.Add(5);

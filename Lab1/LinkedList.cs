@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 namespace Lab1
 {
-    /**Односвязный список*/
     public class LinkedList<T>: IEnumerable<T> where T : IComparable, new()
     {
         private Node<T> _begin;
@@ -159,7 +158,5 @@ namespace Lab1
         {
             return ((IEnumerable<T>)this).GetEnumerator();
         }
-        
-        
     }
 }

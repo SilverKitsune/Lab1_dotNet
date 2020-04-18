@@ -117,16 +117,15 @@ namespace Lab1
                 var nodeSide = side == null ? "+" : side == Side.Left ? "L" : "R";
                 Console.WriteLine($"{indent} [{nodeSide}]- {startNode.Data}");
                 indent += new string(' ', 3);
-                //рекурсивный вызов для левой и правой веток
                 PrintTree(startNode.LeftNode, indent, Side.Left);
                 PrintTree(startNode.RightNode, indent, Side.Right);
             }
         }
         
-        public void PrintTree()
-                {
-                    PrintTree(RootNode);
-                }
+        public void PrintTree() 
+        { 
+            PrintTree(RootNode);
+        }
         
     }
 }
